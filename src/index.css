@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    body{
+        @apply font-[raleway]
+    }
+    li{
+        @apply px-4;
+        @apply cursor-pointer
+    }
+}
+
+.text-box {
+    position: absolute;
+    bottom: -120px; /* Adjust this value as needed to hide the text initially */
+    transition: bottom 0.5s;
+  }
+  
+  .shadow-md:hover .text-box {
+    bottom: 70px; /* Adjust this value as needed to show the text on hover */
+  }
