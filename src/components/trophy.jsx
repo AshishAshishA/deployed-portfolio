@@ -49,19 +49,19 @@ const Trophy = () => {
                 onMouseEnter={() => setCurrIndex(2)}
                 onMouseLeave={() => setCurrIndex(0)}
               >
-                Degree
+                YIDS
               </p>
               <p
                 onMouseEnter={() => setCurrIndex(3)}
                 onMouseLeave={() => setCurrIndex(0)}
               >
-                React
+                Programming
               </p>
               <p
                 onMouseEnter={() => setCurrIndex(4)}
                 onMouseLeave={() => setCurrIndex(0)}
               >
-                Something
+                Web Dev
               </p>
             </div>
             {isTrophy ? (
