@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { data } from "../data/workData.js";
 
 const Work = () => {
   // projects file
   const project = data;
   //setProject(data);
+
+  const [showTitle, setShowTitle] = useState(true);
+  const [showTitleOfId, setShowTitleOfId] = useState(-1);
 
   return (
     <div name="works" className="w-full md:h-screen text-gray-300 bg-[#0a192f]">
@@ -17,7 +20,7 @@ const Work = () => {
         </div>
 
         {/* container for projects */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="min-h-[350px] grid sm:grid-cols-2 md:grid-cols-3 gap-4">
           {/* Gird Item */}
           {project.map((item, index) => (
             <div
@@ -32,11 +35,13 @@ const Work = () => {
               flex justify-center text-center items-center mx-auto content-div "
             >
               {/* Hover effect for images */}
-              <div className="opacity-0 group-hover:opacity-100 ">
-                <span className="text-2xl font bold text-blue-600 tracking-wider ">
+              <div
+              // className="opacity-0 group-hover:opacity-100 "
+              >
+                <span className="text-2xl font bold text-gray-300 tracking-wider opacity-100 group-hover:text-blue-700">
                   {item.name}
                 </span>
-                <div className="pt-8 text-center ">
+                <div className="pt-8 text-center opacity-0 group-hover:opacity-100">
                   {/* eslint-disable-next-line */}
                   <a href={item.github} target="_blank">
                     <button
